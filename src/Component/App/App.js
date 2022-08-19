@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./App.css"
 import Cart from "../Cart/Cart";
 import NavBar from "../Navbar/NavBar";
@@ -6,27 +6,36 @@ import NavBar from "../Navbar/NavBar";
 
 
 export default function App() {
-    const [Answer, setAnswer] = React.useState([{ id: "1", response: "1" }, { response: "2", id: "2" }, { response: "3", id: "3" }, { response: "4", id: "4" }]);
-    const [question, Setquestion] = useState([{}, {}])
-    function OnClickAswareCart(newitem) {
 
-        let newArray = Answer.map((i) => {
-            if (newitem.id === i.id) {
-                return newitem
-            }
-            else {
-                return i
-            }
-        })
-        console.log(newArray);
-        setAnswer(newArray)
+    const [Data, setData] = React.useState([])
+
+    useEffect(() => {
+        getData()
+    }, [])
+
+    function getData() {
+        fetch('http://localhost:3000/Data.json')
+            .then((props) => {
+                return props.json();
+            }).then((result) => {
+                setData(result.reverse())
+            })
+    }
+
+    function OnClickAswareCart(questionId) {
+        setTimeout(()=>{
+            setData(Data.filter((item)=>{
+                return item.questionId != questionId
+            }))
+        },2000)
+        //console.log(newArray);
     }
 
     return (
         <div className="main">
             <NavBar indicate={0} number={3} />
-            {question.map(() => {
-                return <Cart OnClickAswareCart={OnClickAswareCart} qustion={"solal"} aswers={Answer} />
+            {Data.map((item, index) => {
+                return <Cart questionId={item.questionId} OnClickAswareCart={OnClickAswareCart} key={index} qustion={item.question} aswers={item.answer} />
             })}
         </div>
     )

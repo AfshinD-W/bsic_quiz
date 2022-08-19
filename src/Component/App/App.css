@@ -53,6 +53,10 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    position: absolute;
+    width: 100%;
+    border: 1px solid #ddd;
+    background-color: #fff;
 }
 
 .question h2 {
