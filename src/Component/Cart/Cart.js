@@ -25,7 +25,7 @@ class Cart extends Component {
 
             this.setState({ aswers: newArray })
 
-            this.props.OnClickAswareCart(this.props.questionId)
+            this.props.OnClickAswareCart(this.props.questionId, item.isCorrect)
         }
     }
 

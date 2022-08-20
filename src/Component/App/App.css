@@ -15,6 +15,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 2.5s ease-in-out;
 }
 
 .porogres_bar {
@@ -24,12 +25,14 @@
     border-radius: 100px;
     max-width: 100%;
     min-width: 75%;
+    transition: all 2.5s ease-in-out;
     position: relative;
     justify-content: space-evenly;
     overflow: hidden;
 }
 
 .porogres_bar span {
+    transition: all 2.5s ease-in-out;
     background-color: #fff;
     width: 10px;
     height: 10px;
@@ -37,18 +40,19 @@
     z-index: 100;
 }
 
-.porogres_bar-indicatot{
+.porogres_bar-indicatot {
+    transition: all 2.5s ease-in-out;
     position: absolute;
     height: 100%;
     z-index: 1;
     width: 40%;
-    background-color: rgba(68,189,184,1);
+    background-color: rgba(68, 189, 184, 1);
     top: 0;
     width: 100%;
 }
 
 
-.question{
+.question {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -64,6 +68,7 @@
     color: #4a4a4a;
     margin: 50px 10px;
 }
+
 .answer-box {
     max-width: 80%;
     background-color: rgba(238, 238, 238, .75);
@@ -72,8 +77,8 @@
     display: flex;
 }
 
-.answer-box .answer{
+.answer-box .answer {
     padding: 25px 40px;
-    
+
     border-radius: 100px;
 }

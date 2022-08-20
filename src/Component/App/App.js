@@ -7,10 +7,11 @@ import NavBar from "../Navbar/NavBar";
 
 export default function App() {
 
-    const [Data, setData] = React.useState([])
-
+    const [Data, setData] = React.useState(null)
+    const [FullCont, setFullCont] = React.useState(0)
+    const [CorerectAnswerCont, setCorerectAnswerCont] = React.useState(0)
     useEffect(() => {
-        getData()
+        getData();
     }, [])
 
     function getData() {
@@ -19,22 +20,36 @@ export default function App() {
                 return props.json();
             }).then((result) => {
                 setData(result.reverse())
+                setFullCont(result.length)
             })
     }
+    useEffect(() => {
+        if (Data !== null && Data.length === 0) {
+            if (CorerectAnswerCont === FullCont) {
+                alert("YOU WIN")
+            } else {
+                alert("YOU LOSE")
+            }
+        }
+    }, [Data, CorerectAnswerCont, FullCont])
 
-    function OnClickAswareCart(questionId) {
-        setTimeout(()=>{
-            setData(Data.filter((item)=>{
+    function OnClickAswareCart(questionId, isCorrect) {
+        setTimeout(() => {
+            setData(Data.filter((item) => {
                 return item.questionId != questionId
             }))
-        },2000)
-        //console.log(newArray);
+        }, 2000)
+        if (isCorrect) {
+            setCorerectAnswerCont(CorerectAnswerCont + 1)
+        } else {
+            setCorerectAnswerCont(CorerectAnswerCont - 1)
+        }
     }
 
     return (
         <div className="main">
-            <NavBar indicate={0} number={3} />
-            {Data.map((item, index) => {
+            <NavBar indicate={Data?.length - FullCont} number={FullCont} />
+            {Data?.map((item, index) => {
                 return <Cart questionId={item.questionId} OnClickAswareCart={OnClickAswareCart} key={index} qustion={item.question} aswers={item.answer} />
             })}
         </div>

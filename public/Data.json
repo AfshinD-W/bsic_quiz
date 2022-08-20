@@ -2,81 +2,92 @@
     {
         "questionId": 1,
         "question": "What does “www” stand for in a website browser?",
-        "answer":[
+        "answer": [
             {
-                "id":1,
-                "response":"World Wander web"
-            },{
-                "id":2,
-                "response":" World Wide Web",
-                "isCorrect":true
-            },{
-                "id":3,
-                "response":"World W WE"
-            },{
-                "id":4,
-                "response":"World wide white"
+                "id": 1,
+                "response": "World Wander web"
+            },
+            {
+                "id": 2,
+                "response": " World Wide Web",
+                "isCorrect": true
+            },
+            {
+                "id": 3,
+                "response": "World W WE"
+            },
+            {
+                "id": 4,
+                "response": "World wide white"
             }
         ]
-        
     },
     {
         "questionId": 2,
         "question": "Which blood cells move the blood?",
-        "answer":[
+        "answer": [
             {
-                "id":1,
-                "response":"RBC",
-                "isCorrect":true
-            },{
-                "id":2,
-                "response":" YBC"
-            },{
-                "id":3,
-                "response":"WBC"
-            },{
-                "id":4,
-                "response":"Plasma"
+                "id": 1,
+                "response": "RBC",
+                "isCorrect": true
+            },
+            {
+                "id": 2,
+                "response": " YBC"
+            },
+            {
+                "id": 3,
+                "response": "WBC"
+            },
+            {
+                "id": 4,
+                "response": "Plasma"
             }
         ]
     },
     {
         "questionId": 3,
         "question": "How many continents are there in the world?",
-        "answer":[
+        "answer": [
             {
-                "id":1,
-                "response":"6"
-            },{
-                "id":2,
-                "response":" 7",
-                "isCorrect":true
-            },{
-                "id":3,
-                "response":"8"
-            },{
-                "id":4,
-                "response":"9"
+                "id": 1,
+                "response": "6"
+            },
+            {
+                "id": 2,
+                "response": " 7",
+                "isCorrect": true
+            },
+            {
+                "id": 3,
+                "response": "8"
+            },
+            {
+                "id": 4,
+                "response": "9"
             }
         ]
     },
     {
         "questionId": 4,
         "question": "What is the name of the largest continent in the world ?",
-        "answer":[
+        "answer": [
             {
-                "id":1,
-                "response":"Africa"
-            },{
-                "id":2,
-                "response":" South America"
-            },{
-                "id":3,
-                "response":"North America"
-            },{
-                "id":4,
-                "response":"Asia",
-                "isCorrect":true
+                "id": 1,
+                "response": "Africa"
+            },
+            {
+                "id": 2,
+                "response": " South America"
+            },
+            {
+                "id": 3,
+                "response": "North America"
+            },
+            {
+                "id": 4,
+                "response": "Asia",
+                "isCorrect": true
             }
         ]
     }
